@@ -65,6 +65,15 @@ const TableToolbarSearch = ({
   });
 
   const handleExpand = (event, value = !expanded) => {
+    const searchContainer = searchRef && searchRef.current;
+    if (searchContainer) {
+      if (value) {
+        searchRef.current.setAttribute('tabIndex', '-1')
+      }
+      else {
+        searchRef.current.setAttribute('tabIndex', '0')
+      }
+    }
     if (!controlled && (!persistent || (!persistent && !persistant))) {
       setExpandedState(value);
     }

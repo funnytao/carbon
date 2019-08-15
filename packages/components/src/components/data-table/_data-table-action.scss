@@ -63,6 +63,10 @@
     box-shadow: none;
   }
 
+  .#{$prefix}--toolbar-action:focus:not([disabled]).#{$prefix}--toolbar-search-container-expandable:focus {
+    outline: none;
+  }
+
   .#{$prefix}--toolbar-search-container-expandable .#{$prefix}--search {
     width: $layout-04;
     height: 100%;
