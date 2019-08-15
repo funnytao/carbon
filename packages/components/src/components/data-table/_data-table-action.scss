@@ -113,7 +113,7 @@
     height: $layout-04;
     width: $layout-04;
 
-    &:before {
+    &:not(:focus):before {
       top: 2px;
       height: calc(100% - 4px);
       background-color: $hover-ui;
